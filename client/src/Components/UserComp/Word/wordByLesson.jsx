@@ -117,9 +117,9 @@ const WordByLesson=()=>{
 
     const productTemplate = (w) => {
         return (
-            <div className="border-3 surface-border border-round m-8 text-center py-5 px-10">
+            <div className="border-3 surface-border border-round m-8 text-center py-5 px-4">
                 <div className="mb-3">
-                    <img src={w.Img? 'http://localhost:5225/upload/'.concat(w.Img) :""} alt={w.word} className="w-6 shadow-2" />
+                    <img src={w.Img? 'http://localhost:5225/upload/'.concat(w.Img) :""} alt={w.word} className="w-2 shadow-2" />
                 </div>
                 <div>
                     <h1 className="mb-1">{w.word}</h1>

@@ -1,6 +1,6 @@
 import apiSlice from "../../../app/apiSlice";
 
-const wordApiSlice = apiSlice.injectEndpoints({
+const questionApiSlice = apiSlice.injectEndpoints({
     endpoints: (build) => ({
         getQuestionByIdLess: build.query({
             query: (_id) => ({
@@ -8,12 +8,12 @@ const wordApiSlice = apiSlice.injectEndpoints({
             }),
             providesTags: ["Question"]
         }),
-        getQuestionById: build.query({
-            query: (_id) => ({
-                url: '/question/lesson/'.concat(_id)
-            }),
-            providesTags: ["Question"]
-        }),
+        // getQuestionById: build.query({
+        //     query: (_id) => ({
+        //         url: '/question/lesson/'.concat(_id)
+        //     }),
+        //     providesTags: ["Question"]
+        // }),
         // }),
         deleteQuestion: build.mutation({
             query: (_id) => ({
@@ -45,4 +45,4 @@ const wordApiSlice = apiSlice.injectEndpoints({
 
 
 // })
-export const { useAddQestionMutation, useDeleteQuestionMutation, useUpdateQuestionMutation, useGetQuestionByIdLessQuery } = wordApiSlice
+export const { useAddQestionMutation, useDeleteQuestionMutation, useUpdateQuestionMutation, useGetQuestionByIdLessQuery } = questionApiSlice

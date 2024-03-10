@@ -19,6 +19,7 @@ const createNewQuest = async (req, res) => {
 
 
 const getQuestionsByLessonId = async (req, res) => {
+    console.log("sssssssssssssssssssssssssssssssssssss");
     const { lesson } = req.params
     console.log(lesson, 'lrs');
     if (!lesson) return res.status(400).send("idLessons is require!")
@@ -85,4 +86,4 @@ const deleteQuestion = async (req, res) => {
     return res.json({ msg: "permission denied" })
 }
 
-module.exports = { createNewQuest, getQuestionById, getQuestionsByLessonId, updateWord: updateQuestion, deleteQuestion }
+module.exports = { createNewQuest, getQuestionById, getQuestionsByLessonId, updateQuestion, deleteQuestion }
