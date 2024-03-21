@@ -17,11 +17,7 @@ const Login=()=>{
     const navigate=useNavigate()
 
     const toast = useRef(null);
-
-    // const[username,setUsername]=useState('')
-    // const[password,setPassword]=useState('')
-
-    // console.log(data);
+    
     const show = () => {
         toast.current.show({ severity: 'success', summary: 'Form Submitted', detail: getValues('value') });
     };

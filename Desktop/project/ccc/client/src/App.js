@@ -8,10 +8,6 @@ import { PrimeReactProvider } from 'primereact/api';
 import 'primeflex/primeflex.css';  
 import 'primereact/resources/primereact.css';
 import 'primereact/resources/themes/lara-light-indigo/theme.css';
-
-
-// import Login from './Login_register/login';
-// import Register from './Login_register/register';
 import Home from './Components/UserComp/home';
 import LoginDemo from './Login_register/aaa';
 import UserList from './Components/AdminComp/User/userList';
@@ -35,20 +31,22 @@ import ListQestionOfLesson from './Components/AdminComp/Question/listQuestionOfL
 import AddQuestion from './Components/AdminComp/Question/addQuestion';
 import QuestionList from './Components/UserComp/Question/questionList';
 import MyAccount from './Components/UserComp/User/myAccount';
+import HomePage from './Components/homePage';
+import HomeAfterLogin from './Components/homeAfterLogin';
 
 
 function App() {
   return(
     <>
-    {/* <Login /> */}
-    {/* <Register /> 
-    <Login /> */}
+
 
     <Routes>
-    <Route path='/' element={<LoginDemo />} />
+
+    <Route path='/' element={<HomePage />} />
+    <Route path='/login' element={<LoginDemo />} />
     <Route path='/register' element={<Register />} />
-   {/*  <Route path='/login' element={<Login />} /> */}
     <Route path='/user' element={<Home />} >
+    <Route path='/user/home' element={<HomeAfterLogin />} />
     <Route path='/user/lesson' element={<ChooseByLevel />} />
     <Route path='/user/lessonByLevel/:level' element={<LessonsByLevel />} />
     <Route path='/user/wordsByLesson/:idLess' element={<WordByLesson />} />
@@ -57,6 +55,7 @@ function App() {
 
     </Route>
     <Route path='/admin' element={<AdminHome />} >
+    <Route path='/admin/home' element={<HomeAfterLogin />} />
     <Route path='/admin/user' element={<UserList />} />
     <Route path='/admin/learn' element={<LessonList />} />
     <Route path='/admin/addlesson' element={<AddLesson />} />

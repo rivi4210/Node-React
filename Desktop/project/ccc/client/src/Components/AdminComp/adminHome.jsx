@@ -20,7 +20,7 @@ const AdminHome = () => {
         {
             label: 'Home',
             icon: 'pi pi-home',
-            url: '/'
+            url: '/admin/home'
         },
         {
             label: 'Users',

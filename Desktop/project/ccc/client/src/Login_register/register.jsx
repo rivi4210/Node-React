@@ -31,14 +31,10 @@ const Register = () => {
 
     const checkAllow = (isSuccess) => {
         if (!isSuccess) {
-            // alert("try again")
-            // <Alert key={'info'} variant={'info'}></Alert>
-            // alert.show('Oh look, an alert!')
-            
             reset()
             navigate('/register')
         }
-        else navigate('/')
+        else navigate('/login')
     }
 
     useEffect(() => {
