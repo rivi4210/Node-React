@@ -2,14 +2,10 @@ import React, { useRef } from 'react';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { useState, useEffect } from 'react';
 import { Button } from 'primereact/button';
-// import { DataView } from 'primereact/dataview';
 import { Rating } from 'primereact/rating';
 import { Tag } from 'primereact/tag';
 import { classNames } from 'primereact/utils';
 import { DataScroller } from 'primereact/datascroller';
-// import { ProductService } from './service/ProductService';
-// import './Blog.css';
-// import { useGetUsersQuery, useDeleteUserMutation, useAddUserMutation, useUpdateUserMutation } from './usersApiSlice';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -24,7 +20,6 @@ import { RadioButton } from 'primereact/radiobutton';
 
 import { Link, useParams } from "react-router-dom";
 import { useGetQuestionByIdLessQuery } from './questionApiSlice';
-// import UpdateWord from './updateWord';
 import { useDeleteWordMutation, useUpdateWordMutation } from '../Word/wordApiSlice';
 import DeleteQuestion from './deleteQuestion';
 import UpdateQuestion from './updateQuestion';
@@ -96,50 +91,6 @@ const ListQestionOfLesson = () => {
             </DataTable>
         </div>
     )
-    // const itemTemplate = (quest, index) => {
-    //     return (
-    //         <div className="col-12" >
-    //             <div className={classNames('flex flex-column xl:flex-row xl:align-items-start p-4 gap-4', { 'border-top-1 surface-border': index !== 0 })}>
-    //                 <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
-    //                     <div className="flex flex-column align-items-center sm:align-items-start gap-3">
-    //                         <div className="text-4xl font-bold text-900">{quest.question}</div>
-    //                         <div className="flex align-items-center gap-3">
-    //                             <span className="flex align-items-center gap-2">
-    //                                 <span className="text-2xl font-bold text-700">{quest.answer}</span>
-    //                             </span>
-    //                             <div>
-    //                                 {quest.optional.map((e) => {
-    //                                     return (<div>{e}</div>)
-    //                                 })}
-    //                             </div>
-    //                         </div>
-    //                     </div>
-    //                     <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2" align='right'>
-    //                         {console.log("Wwwwwwww", quest)}
-
-    //                         <DeleteQuestion _id={quest._id} />
-    //                         <UpdateQuestion q={quest} />
-
-
-
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // };
-    // return (
-    //     <div className="card">
-    //         <Button icon="pi pi-arrow-left" onClick={() => navigate("/admin/learn")} />
-
-    //         <div align='center'><Button
-    //             label="ADD QUESTION"
-    //             text
-    //             onClick={() => { navigate('/admin/addQuestion/'.concat(idLess)) }}
-    //         /></div>
-
-    //         {questions?.length && <DataScroller value={questions} itemTemplate={itemTemplate} rows={10000} inline scrollHeight="700px" />}
-    //     </div>
-    // );
+   
 }
 export default ListQestionOfLesson

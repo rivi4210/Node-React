@@ -2,14 +2,10 @@ import React, { useRef } from 'react';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { useState, useEffect } from 'react';
 import { Button } from 'primereact/button';
-// import { DataView } from 'primereact/dataview';
 import { Rating } from 'primereact/rating';
 import { Tag } from 'primereact/tag';
 import { classNames } from 'primereact/utils';
 import { DataScroller } from 'primereact/datascroller';
-// import { ProductService } from './service/ProductService';
-// import './Blog.css';
-// import { useGetUsersQuery, useDeleteUserMutation, useAddUserMutation, useUpdateUserMutation } from './usersApiSlice';
 import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
@@ -40,20 +36,12 @@ const ListWordOfLesson = () => {
     const [formUpdate, setFormUpdate] = useState(false)
 
     const [_id, setId] = useState("")
-    // const [category, setCategory] = useState("")
-    // const [level, setLevel] = useState("")
-
-    // const [word, setWord] = useState({})
-    // const claer = () => {
-    //     setLevel("")
-    //     setCategory("")
-    // }
+    
 
     const [deleteWord, { isErrorDel, isSuccessDel, errorDel }] = useDeleteWordMutation()
     const handleDelete = (e) => {
         console.log(e);
         deleteWord(e)
-        // claer()
     }
 
 
@@ -119,44 +107,6 @@ const ListWordOfLesson = () => {
         </div>
     )
 
-    // const itemTemplate = (w, index) => {
-    //     return (
-    //         <div className="col-12" >
-
-    //             <div className={classNames('flex flex-column xl:flex-row xl:align-items-start p-4 gap-4', { 'border-top-1 surface-border': index !== 0 })}>
-    //                 <img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={'http://localhost:5225/upload/'.concat(w.Img)} alt={w.name} />
-    //                 <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
-    //                     <div className="flex flex-column align-items-center sm:align-items-start gap-3">
-    //                         <div className="text-2xl font-bold text-900">{w.word}</div>
-    //                         <div className="flex align-items-center gap-3">
-    //                             <span className="flex align-items-center gap-2">
-    //                                 <span className="font-semibold">{w.translating}</span>
-    //                             </span>
-    //                         </div>
-    //                     </div>
-    //                     <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2" align='right'>
-    //                         {console.log("Wwwwwwww", w)}
-    //                         <span><UpdateWord w={w} /></span>
-    //                         <span><DeleteWord _id={w._id} /></span>
-
-    //                     </div> 
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     );
-    // };
-    // return (
-    //     <div className="card">
-    //         <Button icon="pi pi-arrow-left" onClick={() => navigate("/admin/learn")} />
-
-    //         <div align='center'><Button
-    //             label="Add Word to the Lesson"
-    //             text
-    //             onClick={() => { navigate('/admin/addWord/'.concat(idLess)) }}
-    //         /></div>
-
-    //         {words?.length && <DataScroller value={words} itemTemplate={itemTemplate} rows={10000} inline scrollHeight="700px" />}
-    //     </div>
-    // );
+    
 }
 export default ListWordOfLesson
