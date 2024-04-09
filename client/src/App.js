@@ -33,6 +33,7 @@ import Register from './Login_register/register';
 import AddUser from './Components/AdminComp/User/addUser';
 import ListQestionOfLesson from './Components/AdminComp/Question/listQuestionOfLesson';
 import AddQuestion from './Components/AdminComp/Question/addQuestion';
+import QuestionList from './Components/UserComp/Question/questionLIst';
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
     <Route path='/user/lesson' element={<ChooseByLevel />} />
     <Route path='/user/lessonByLevel/:level' element={<LessonsByLevel />} />
     <Route path='/user/wordsByLesson/:idLess' element={<WordByLesson />} />
+    <Route path='/user/questionsByLesson/:idLess' element={<QuestionList />} />
     </Route>
     <Route path='/admin' element={<AdminHome />} >
     <Route path='/admin/user' element={<UserList />} />
