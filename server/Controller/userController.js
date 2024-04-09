@@ -42,10 +42,14 @@ const getUsersById = async (req, res) => {
         const { id } = req.params
         if (!id) return res.status(400).send("id is require!")
         console.log(typeof (id));
-        const user = await User.find({ _id: id }, { password: 0 })
+        const user = await User.findOne({ _id: id }, { password: 0 })
         return res.json(user)
     }
-    return res.json({ msg: 'denied' }).status(401)
+    if (req.user.role == "user"){
+    const _id  = req.user._id
+        const user = await User.findOne({ _id }, { password: 0 }).lean()
+        return res.json(user)
+  }
 
 }
 
